@@ -93,10 +93,10 @@ a { color: inherit; }
   text-decoration: none;
   color: var(--ink);
 }
-.nav__links { display: flex; align-items: center; gap: 1.8rem; }
+.nav__links { display: flex; align-items: center; gap: 1.3rem; }
 .nav__links a {
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -191,6 +191,23 @@ a { color: inherit; }
   color: var(--muted);
   margin: 1.4rem 0 2.5rem;
 }
+/* Save-the-date illustration as hero centerpiece (optional) */
+.hero__card {
+  width: auto;
+  max-width: min(380px, 78vw);
+  max-height: 62vh;
+  margin: 0 auto 1.8rem;
+  border-radius: 8px;
+  background: var(--white);
+  padding: 8px;
+  box-shadow: 0 24px 50px -22px rgba(58,53,46,0.45);
+  border: 1px solid var(--line);
+}
+/* When the illustration loads, the names/date live inside it, so hide the typeset copy */
+.hero--has-card .hero__eyebrow,
+.hero--has-card .hero__names,
+.hero--has-card .hero__date { display: none; }
+.hero--has-card .hero__card { margin-bottom: 2.4rem; }
 .hero__scroll {
   position: absolute;
   bottom: 1.6rem; left: 50%;
@@ -326,12 +343,32 @@ a { color: inherit; }
 }
 .venue__map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; }
 
+/* ===== Our Story ===== */
+.story {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.4rem;
+}
+.story__chapter {
+  position: relative;
+  padding-left: 1.6rem;
+  border-left: 2px solid var(--line);
+}
+.story__chapter-title {
+  font-size: 1.6rem;
+  color: var(--sea-dark);
+  margin-bottom: 0.4rem;
+}
+.story__chapter p { margin: 0; color: var(--muted); }
+
 /* ===== Cards ===== */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
 }
+.cards--four { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .card {
   background: var(--white);
   padding: 2.2rem 1.8rem;
@@ -513,7 +550,7 @@ a { color: inherit; }
 .footer__made { font-size: 0.85rem; opacity: 0.7; margin: 0; }
 
 /* ===== Reveal-on-scroll ===== */
-.section__head, .timeline__item, .card, .registry__item, .venue__info, .venue__map, .faq__item, .rsvp-form {
+.section__head, .story__chapter, .timeline__item, .card, .registry__item, .venue__info, .venue__map, .faq__item, .rsvp-form {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
@@ -558,7 +595,7 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; scroll-behavior: auto !important; }
-  .section__head, .timeline__item, .card, .registry__item, .venue__info, .venue__map, .faq__item, .rsvp-form {
+  .section__head, .story__chapter, .timeline__item, .card, .registry__item, .venue__info, .venue__map, .faq__item, .rsvp-form {
     opacity: 1; transform: none;
   }
 }

@@ -29,9 +29,11 @@
       </button>
 
       <nav class="nav__links" id="navLinks">
+        <a href="#story">Our Story</a>
         <a href="#schedule">Schedule</a>
         <a href="#venue">Venue</a>
         <a href="#travel">Travel</a>
+        <a href="#explore">Explore</a>
         <a href="#registry">Registry</a>
         <a href="#gallery">Gallery</a>
         <a href="#faq">FAQ</a>
@@ -44,6 +46,15 @@
   <section class="hero" id="top">
     <div class="hero__waves" aria-hidden="true"></div>
     <div class="hero__content">
+      <!--
+        Drop your save-the-date illustration in assets/save-the-date.png and it
+        will appear here as the centerpiece. If the file is missing, the typeset
+        names below are shown instead (handled automatically in js/main.js).
+      -->
+      <img class="hero__card" id="heroCard" src="assets/save-the-date.png"
+           alt="Ana & Abraham — Save the Date, 18–19 June 2027, Mallorca, Spain"
+           onerror="this.remove()" />
+
       <p class="hero__eyebrow">Save the Date</p>
       <h1 class="hero__names">Ana <span>&amp;</span> Abraham</h1>
       <p class="hero__date">18&ndash;19 June 2027 · Mallorca, Spain</p>
@@ -59,6 +70,32 @@
       <a href="#rsvp" class="btn btn--dark">RSVP</a>
     </div>
     <a href="#schedule" class="hero__scroll" aria-label="Scroll down">&#8675;</a>
+  </section>
+
+  <!-- ===== Our Story ===== -->
+  <!-- Edit the copy below with your real story — these are friendly placeholders. -->
+  <section class="section" id="story">
+    <div class="section__head">
+      <p class="section__eyebrow">How It All Began</p>
+      <h2 class="section__title">Our Story</h2>
+    </div>
+
+    <div class="story">
+      <article class="story__chapter">
+        <h3 class="story__chapter-title">Where we met</h3>
+        <p>It started the way the best stories do &mdash; unexpectedly. One conversation turned into a thousand more, and somewhere along the way we realised we'd found our person. <em>(Ana &amp; Abraham, replace this with how you two met!)</em></p>
+      </article>
+
+      <article class="story__chapter">
+        <h3 class="story__chapter-title">The proposal</h3>
+        <p>After years of adventures, late-night talks and far too many shared plates of food, the question was finally popped &mdash; and the answer, of course, was an enthusiastic "yes". <em>(Add the story of the proposal here.)</em></p>
+      </article>
+
+      <article class="story__chapter">
+        <h3 class="story__chapter-title">Our little family</h3>
+        <p>And then there were three. Our cocker spaniel completes our little family and, naturally, will be part of the celebrations &mdash; bow tie and all. We can't wait to share the next chapter with the people (and pup) we love most.</p>
+      </article>
+    </div>
   </section>
 
   <!-- ===== Schedule ===== -->
@@ -140,20 +177,18 @@
 
     <div class="venue">
       <div class="venue__info">
-        <h3>A Seaside Finca in Mallorca</h3>
-        <p class="venue__addr">Mallorca, Balearic Islands<br />Spain</p>
-        <p>Our celebration takes place at a traditional Mallorcan <em>finca</em> overlooking the Mediterranean &mdash; whitewashed stone, olive groves, and the sea just beyond. Both the welcome dinner and the wedding will be held here.</p>
-        <p><strong>Getting there:</strong> The venue is roughly a 40-minute drive from Palma. Detailed directions and shuttle times will follow with your RSVP confirmation.</p>
-        <p class="venue__note"><em>Final venue name &amp; address to be confirmed &mdash; we'll update this page soon!</em></p>
+        <h3>Finca Sa Torre</h3>
+        <p class="venue__addr">Mallorca · Balearic Islands<br />Spain</p>
+        <p>Our celebration will be held at <strong>Finca Sa Torre</strong>, a beautiful traditional Mallorcan estate. Both the welcome evening and the wedding day will take place here.</p>
+        <p class="venue__note"><em>Exact directions and shuttle times will follow with your RSVP confirmation.</em></p>
         <div class="venue__actions">
-          <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Mallorca+Spain" target="_blank" rel="noopener">Open in Maps</a>
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Finca+Sa+Torre+Mallorca" target="_blank" rel="noopener">Open in Maps</a>
         </div>
       </div>
       <div class="venue__map">
-        <!-- Replace the src with your venue's Google Maps embed link -->
         <iframe
-          title="Venue location map"
-          src="https://www.google.com/maps?q=Mallorca,+Spain&output=embed"
+          title="Finca Sa Torre location map"
+          src="https://www.google.com/maps?q=Finca+Sa+Torre+Mallorca&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -180,6 +215,42 @@
       <article class="card">
         <h3>Getting Around</h3>
         <p>We recommend <strong>renting a car</strong> to explore the island. A <strong>shuttle</strong> will run between the recommended hotels and the venue on the wedding day so you can relax and enjoy the cava.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Explore Mallorca ===== -->
+  <section class="section" id="explore">
+    <div class="section__head">
+      <p class="section__eyebrow">Make a Holiday of It</p>
+      <h2 class="section__title">Explore Mallorca</h2>
+      <p class="section__lede">You've come all this way &mdash; stay a few extra days! Here are some of our favourite corners of the island.</p>
+    </div>
+
+    <div class="cards cards--four">
+      <article class="card">
+        <h3>Palma &amp; the Cathedral</h3>
+        <p>Wander the old town and see <strong>La Seu</strong>, the stunning seafront Gothic cathedral. Great for tapas, boutiques and people-watching.</p>
+      </article>
+      <article class="card">
+        <h3>Sóller &amp; the Train</h3>
+        <p>Ride the vintage wooden train through the mountains to <strong>Sóller</strong>, then a tram down to the harbour for lunch by the sea.</p>
+      </article>
+      <article class="card">
+        <h3>Deià &amp; Valldemossa</h3>
+        <p>Two of the prettiest villages in the <strong>Serra de Tramuntana</strong> (a UNESCO site) &mdash; stone houses, art, and dramatic coastal views.</p>
+      </article>
+      <article class="card">
+        <h3>Beaches &amp; Coves</h3>
+        <p>Swim in turquoise <em>calas</em> like <strong>Cala Llombards</strong> and <strong>Es Trenc</strong>, or hire a boat for the day along the coast.</p>
+      </article>
+      <article class="card">
+        <h3>Food &amp; Wine</h3>
+        <p>Try <em>pa amb oli</em>, fresh seafood and an <em>ensaïmada</em> pastry, and taste local wines in the <strong>Binissalem</strong> region.</p>
+      </article>
+      <article class="card">
+        <h3>Mountains &amp; Hikes</h3>
+        <p>Hike or drive the <strong>Tramuntana</strong> mountains, visit <strong>Cap de Formentor</strong>, and catch a Mediterranean sunset to remember.</p>
       </article>
     </div>
   </section>

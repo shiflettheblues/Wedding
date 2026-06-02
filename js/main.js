@@ -23,6 +23,16 @@
     });
   }
 
+  /* ---------- Hero save-the-date illustration ---------- */
+  // If assets/save-the-date.png loads, swap the typeset names for the illustration.
+  var heroCard = document.getElementById("heroCard");
+  var hero = document.getElementById("top");
+  if (heroCard && hero) {
+    var showCard = function () { hero.classList.add("hero--has-card"); };
+    if (heroCard.complete && heroCard.naturalWidth > 0) showCard();
+    else heroCard.addEventListener("load", showCard);
+  }
+
   /* ---------- Nav shadow on scroll ---------- */
   var nav = document.getElementById("nav");
   function onScroll() {
@@ -61,7 +71,7 @@
 
   /* ---------- Reveal on scroll ---------- */
   var revealEls = document.querySelectorAll(
-    ".section__head, .timeline__item, .card, .registry__item, .venue__info, .venue__map, .faq__item, .rsvp-form"
+    ".section__head, .story__chapter, .timeline__item, .card, .registry__item, .venue__info, .venue__map, .faq__item, .rsvp-form"
   );
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(
