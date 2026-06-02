@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex &amp; Jordan — We're Getting Married</title>
+  <meta name="description" content="Join us as we celebrate the wedding of Alex & Jordan. Find event details, travel info, our registry, and RSVP here." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Alex & Jordan are getting married!" />
+  <meta property="og:description" content="Event details, travel, registry, and RSVP." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">A &amp; J</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#schedule">Schedule</a>
+        <a href="#venue">Venue</a>
+        <a href="#travel">Travel</a>
+        <a href="#registry">Registry</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#rsvp" class="nav__cta">RSVP</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="top">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Together with their families</p>
+      <h1 class="hero__names">Alex <span>&amp;</span> Jordan</h1>
+      <p class="hero__date">September 12, 2026 · Sonoma, California</p>
+
+      <!-- Countdown -->
+      <div class="countdown" id="countdown" aria-label="Countdown to the wedding">
+        <div class="countdown__unit"><span class="countdown__num" data-days>--</span><span class="countdown__label">Days</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-hours>--</span><span class="countdown__label">Hours</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-minutes>--</span><span class="countdown__label">Minutes</span></div>
+        <div class="countdown__unit"><span class="countdown__num" data-seconds>--</span><span class="countdown__label">Seconds</span></div>
+      </div>
+
+      <a href="#rsvp" class="btn btn--light">RSVP</a>
+    </div>
+    <a href="#schedule" class="hero__scroll" aria-label="Scroll down">&#8675;</a>
+  </section>
+
+  <!-- ===== Schedule ===== -->
+  <section class="section section--alt" id="schedule">
+    <div class="section__head">
+      <p class="section__eyebrow">The Day Of</p>
+      <h2 class="section__title">Schedule of Events</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="timeline__time">3:30 PM</div>
+        <div class="timeline__body">
+          <h3>Guest Arrival</h3>
+          <p>Doors open. Grab a welcome drink and find your seat in the garden.</p>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__time">4:00 PM</div>
+        <div class="timeline__body">
+          <h3>Ceremony</h3>
+          <p>The vows, under the old oak tree. Please be seated by 3:50 PM.</p>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__time">5:00 PM</div>
+        <div class="timeline__body">
+          <h3>Cocktail Hour</h3>
+          <p>Drinks, hors d'oeuvres, and lawn games on the terrace.</p>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__time">6:30 PM</div>
+        <div class="timeline__body">
+          <h3>Dinner &amp; Toasts</h3>
+          <p>A seated dinner in the barn, followed by speeches.</p>
+        </div>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__time">8:00 PM</div>
+        <div class="timeline__body">
+          <h3>Dancing</h3>
+          <p>The party gets started. Dance until midnight!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Venue ===== -->
+  <section class="section" id="venue">
+    <div class="section__head">
+      <p class="section__eyebrow">Where</p>
+      <h2 class="section__title">The Venue</h2>
+    </div>
+
+    <div class="venue">
+      <div class="venue__info">
+        <h3>Oak Hill Estate &amp; Vineyard</h3>
+        <p class="venue__addr">1234 Vineyard Lane<br />Sonoma, CA 95476</p>
+        <p>A family-run vineyard tucked into the rolling hills of Sonoma. The ceremony and reception will both be held on-site, so once you arrive you're set for the evening.</p>
+        <p><strong>Parking:</strong> Complimentary on-site parking is available. We also encourage carpooling and ride-shares.</p>
+        <div class="venue__actions">
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&query=Sonoma+California" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+      <div class="venue__map">
+        <!-- Replace the src with your venue's Google Maps embed link -->
+        <iframe
+          title="Venue location map"
+          src="https://www.google.com/maps?q=Sonoma,+California&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Travel ===== -->
+  <section class="section section--alt" id="travel">
+    <div class="section__head">
+      <p class="section__eyebrow">Getting There</p>
+      <h2 class="section__title">Travel &amp; Hotels</h2>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Fly In</h3>
+        <p>The closest airports are <strong>Charles M. Schulz–Sonoma County (STS)</strong>, about 30 minutes away, and <strong>San Francisco (SFO)</strong>, about 75 minutes away.</p>
+      </article>
+      <article class="card">
+        <h3>Where to Stay</h3>
+        <p>We've reserved a room block at the <strong>Sonoma Creek Inn</strong>. Mention "Alex &amp; Jordan Wedding" when booking for the group rate. The <strong>Hillside Lodge</strong> is a great budget-friendly alternative.</p>
+      </article>
+      <article class="card">
+        <h3>Getting Around</h3>
+        <p>We recommend renting a car for the weekend. A <strong>shuttle</strong> will run between the Sonoma Creek Inn and the venue on the wedding day — details to follow with your RSVP confirmation.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Registry ===== -->
+  <section class="section" id="registry">
+    <div class="section__head">
+      <p class="section__eyebrow">Gifts</p>
+      <h2 class="section__title">Registry</h2>
+      <p class="section__lede">Your presence is the greatest gift of all. If you'd like to help us start this next chapter, we've set up a few registries below.</p>
+    </div>
+
+    <div class="registry">
+      <a class="registry__item" href="#" target="_blank" rel="noopener">
+        <span class="registry__name">Amazon</span>
+        <span class="registry__cta">View Registry →</span>
+      </a>
+      <a class="registry__item" href="#" target="_blank" rel="noopener">
+        <span class="registry__name">Crate &amp; Barrel</span>
+        <span class="registry__cta">View Registry →</span>
+      </a>
+      <a class="registry__item" href="#" target="_blank" rel="noopener">
+        <span class="registry__name">Honeymoon Fund</span>
+        <span class="registry__cta">Contribute →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="section section--alt" id="gallery">
+    <div class="section__head">
+      <p class="section__eyebrow">Us</p>
+      <h2 class="section__title">Gallery</h2>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <!-- Swap the src values for your own photos in assets/ -->
+      <figure class="gallery__item"><img src="https://picsum.photos/seed/wed1/600/750" alt="Engagement photo" loading="lazy" /></figure>
+      <figure class="gallery__item"><img src="https://picsum.photos/seed/wed2/600/450" alt="Couple photo" loading="lazy" /></figure>
+      <figure class="gallery__item"><img src="https://picsum.photos/seed/wed3/600/600" alt="Couple photo" loading="lazy" /></figure>
+      <figure class="gallery__item"><img src="https://picsum.photos/seed/wed4/600/450" alt="Couple photo" loading="lazy" /></figure>
+      <figure class="gallery__item"><img src="https://picsum.photos/seed/wed5/600/750" alt="Couple photo" loading="lazy" /></figure>
+      <figure class="gallery__item"><img src="https://picsum.photos/seed/wed6/600/600" alt="Couple photo" loading="lazy" /></figure>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="section__head">
+      <p class="section__eyebrow">Good to Know</p>
+      <h2 class="section__title">FAQ</h2>
+    </div>
+
+    <div class="faq">
+      <details class="faq__item">
+        <summary>What should I wear?</summary>
+        <p>The dress code is semi-formal / cocktail attire. The ceremony is outdoors on grass, so you may want to skip the stilettos!</p>
+      </details>
+      <details class="faq__item">
+        <summary>Can I bring a plus-one?</summary>
+        <p>We've reserved seats for the guests named on your invitation. If your invitation includes a guest, you'll be able to add them when you RSVP.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Are kids welcome?</summary>
+        <p>We love your little ones, but this will be an adults-only celebration so everyone can relax and enjoy the evening.</p>
+      </details>
+      <details class="faq__item">
+        <summary>What about dietary restrictions?</summary>
+        <p>Absolutely — there's a field in the RSVP form where you can let us know about any allergies or dietary needs.</p>
+      </details>
+      <details class="faq__item">
+        <summary>When should I RSVP by?</summary>
+        <p>Please RSVP by <strong>August 1, 2026</strong> so we can give the venue a final headcount.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== RSVP ===== -->
+  <section class="section section--rsvp" id="rsvp">
+    <div class="section__head">
+      <p class="section__eyebrow">Will You Join Us?</p>
+      <h2 class="section__title">RSVP</h2>
+      <p class="section__lede">Kindly respond by August 1, 2026.</p>
+    </div>
+
+    <!--
+      RSVP form submits to Formspree (works on any static host).
+      1. Create a free form at https://formspree.io
+      2. Replace YOUR_FORM_ID below with your form's ID.
+    -->
+    <form class="rsvp-form" id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="field">
+        <label for="name">Full Name<span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="field">
+        <label for="email">Email<span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="field">
+        <span class="field__label">Will you be attending?<span aria-hidden="true">*</span></span>
+        <div class="radio-group">
+          <label class="radio"><input type="radio" name="attending" value="Joyfully accepts" required /> <span>Joyfully accepts</span></label>
+          <label class="radio"><input type="radio" name="attending" value="Regretfully declines" /> <span>Regretfully declines</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="guests">Number of guests (including you)</label>
+        <select id="guests" name="guests">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="meal">Meal preference</label>
+        <select id="meal" name="meal">
+          <option value="">No preference</option>
+          <option value="Beef">Beef</option>
+          <option value="Chicken">Chicken</option>
+          <option value="Fish">Fish</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Vegan">Vegan</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="dietary">Allergies / dietary restrictions</label>
+        <input type="text" id="dietary" name="dietary" placeholder="e.g. gluten-free, nut allergy" />
+      </div>
+
+      <div class="field">
+        <label for="song">Song request</label>
+        <input type="text" id="song" name="song" placeholder="What will get you on the dance floor?" />
+      </div>
+
+      <div class="field">
+        <label for="message">A note for the couple</label>
+        <textarea id="message" name="message" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--dark">Send RSVP</button>
+      <p class="rsvp-form__status" id="rsvpStatus" role="status"></p>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p class="footer__names">Alex &amp; Jordan</p>
+    <p class="footer__date">09 · 12 · 2026</p>
+    <p class="footer__made">Made with love. Can't wait to celebrate with you.</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
