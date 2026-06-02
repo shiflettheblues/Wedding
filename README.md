@@ -1,6 +1,7 @@
-# Alex & Jordan — Wedding Website
+# Ana & Abraham — Wedding Website
 
-A fast, elegant, single-page wedding website inspired by [Joy (withjoy.com)](https://withjoy.com).
+A fast, elegant, single-page wedding website inspired by [Joy (withjoy.com)](https://withjoy.com),
+themed for a watercolour Mediterranean destination wedding in **Mallorca, 18–19 June 2027**.
 Pure HTML/CSS/JS — no build step, free to host.
 
 ## Sections

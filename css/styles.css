@@ -4,18 +4,22 @@
    ============================================================ */
 
 :root {
-  --ivory:      #faf7f2;
-  --cream:      #f3ece1;
-  --ink:        #2f2b26;
-  --muted:      #6f685e;
-  --sage:       #8a9a7b;
-  --sage-dark:  #6f7e62;
-  --gold:       #b08d57;
-  --line:       #e3dac9;
+  --ivory:      #fbf7ee;  /* warm watercolour paper */
+  --cream:      #f4ecdd;
+  --ink:        #3a352e;
+  --muted:      #756d61;
+  --sage:       #94a07a;  /* olive / cypress green */
+  --sage-dark:  #76845c;
+  --sea:        #8fb9c7;  /* Mediterranean blue */
+  --sea-dark:   #5f97a8;
+  --terra:      #d8896b;  /* terracotta / peach */
+  --gold:       #c0894e;
+  --line:       #e8dcc6;
   --white:      #ffffff;
 
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --sans:  "Jost", "Helvetica Neue", Arial, sans-serif;
+  --serif:  "Cormorant Garamond", Georgia, serif;
+  --script: "Great Vibes", "Dancing Script", cursive;
+  --sans:   "Jost", "Helvetica Neue", Arial, sans-serif;
 
   --maxw: 1100px;
   --radius: 4px;
@@ -58,7 +62,7 @@ a { color: inherit; }
 }
 .btn--light { background: var(--white); color: var(--ink); }
 .btn--light:hover { background: transparent; color: var(--white); border-color: var(--white); }
-.btn--dark { background: var(--sage-dark); color: var(--white); border: none; }
+.btn--dark { background: var(--sea-dark); color: var(--white); border: none; }
 .btn--dark:hover { background: var(--ink); }
 .btn--outline { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--outline:hover { background: var(--ink); color: var(--white); }
@@ -100,12 +104,12 @@ a { color: inherit; }
 }
 .nav__links a:hover { color: var(--ink); }
 .nav__cta {
-  border: 1px solid var(--sage-dark);
-  color: var(--sage-dark) !important;
+  border: 1px solid var(--sea-dark);
+  color: var(--sea-dark) !important;
   padding: 0.5em 1.3em;
   border-radius: var(--radius);
 }
-.nav__cta:hover { background: var(--sage-dark); color: var(--white) !important; }
+.nav__cta:hover { background: var(--sea-dark); color: var(--white) !important; }
 
 .nav__toggle {
   display: none;
@@ -134,29 +138,57 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--white);
+  color: var(--ink);
   padding: 6rem 1.5rem 4rem;
-  background: linear-gradient(rgba(47,43,38,0.35), rgba(47,43,38,0.45)),
-              url("https://picsum.photos/seed/weddinghero/1920/1280") center/cover no-repeat;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 50% -10%, #fdfbf6 0%, var(--ivory) 55%, #f3ecdd 100%);
+}
+/* Soft watercolour sea & sky washes, like the save-the-date */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 45% at 18% 22%, rgba(216,137,107,0.16), transparent 70%),
+    radial-gradient(55% 40% at 85% 18%, rgba(192,137,78,0.14), transparent 70%),
+    radial-gradient(80% 50% at 50% 118%, rgba(95,151,168,0.30), transparent 72%),
+    radial-gradient(50% 30% at 80% 95%, rgba(148,160,122,0.22), transparent 70%);
+  z-index: 0;
+}
+/* Gentle watercolour wave band along the bottom */
+.hero__waves {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 34vh;
+  z-index: 0;
+  background:
+    linear-gradient(to top, rgba(143,185,199,0.45), rgba(143,185,199,0) 100%);
+  -webkit-mask: radial-gradient(120% 100% at 50% 100%, #000 60%, transparent 61%);
+          mask: radial-gradient(120% 100% at 50% 100%, #000 60%, transparent 61%);
 }
 .hero__content { position: relative; z-index: 2; }
 .hero__eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-size: 0.8rem;
-  margin: 0 0 1.2rem;
-  opacity: 0.92;
+  font-family: var(--script);
+  letter-spacing: 0.04em;
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  color: var(--sea-dark);
+  margin: 0 0 0.4rem;
 }
 .hero__names {
-  font-size: clamp(3.2rem, 11vw, 7rem);
+  font-family: var(--script);
+  font-size: clamp(3.6rem, 13vw, 8rem);
   font-weight: 400;
+  line-height: 1;
   margin: 0;
+  color: var(--ink);
 }
-.hero__names span { font-style: italic; font-weight: 400; color: var(--cream); }
+.hero__names span { color: var(--terra); }
 .hero__date {
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.95rem;
+  color: var(--muted);
   margin: 1.4rem 0 2.5rem;
 }
 .hero__scroll {
@@ -165,7 +197,7 @@ a { color: inherit; }
   transform: translateX(-50%);
   font-size: 1.8rem;
   text-decoration: none;
-  color: var(--white);
+  color: var(--sea-dark);
   z-index: 2;
   animation: bob 2.2s ease-in-out infinite;
 }
@@ -213,6 +245,24 @@ a { color: inherit; }
   max-width: 620px;
   margin: 1.2rem auto 0;
   color: var(--muted);
+}
+
+/* ===== Day blocks (two-day schedule) ===== */
+.day-block { max-width: 640px; margin: 0 auto 3rem; }
+.day-block:last-child { margin-bottom: 0; }
+.day-block__title {
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--sea-dark);
+  margin-bottom: 2rem;
+  position: relative;
+}
+.day-block__title::after {
+  content: "";
+  display: block;
+  width: 54px; height: 1px;
+  background: var(--terra);
+  margin: 0.7rem auto 0;
 }
 
 /* ===== Timeline ===== */
@@ -266,6 +316,7 @@ a { color: inherit; }
 }
 .venue__info h3 { font-size: 1.9rem; margin-bottom: 0.6rem; }
 .venue__addr { color: var(--gold); letter-spacing: 0.05em; margin: 0 0 1.4rem; }
+.venue__note { color: var(--terra); font-size: 0.92rem; }
 .venue__actions { margin-top: 1.8rem; }
 .venue__map {
   border-radius: var(--radius);
@@ -457,7 +508,7 @@ a { color: inherit; }
   background: var(--ink);
   color: var(--cream);
 }
-.footer__names { font-family: var(--serif); font-size: 2.4rem; margin: 0; }
+.footer__names { font-family: var(--script); font-size: 3rem; margin: 0; }
 .footer__date { letter-spacing: 0.3em; font-size: 0.85rem; margin: 0.6rem 0 1.4rem; }
 .footer__made { font-size: 0.85rem; opacity: 0.7; margin: 0; }
 
